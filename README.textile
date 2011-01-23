@@ -7,15 +7,15 @@ h2. Install
 
 Add the following line to your plugins file (which is located at project/plugins/Plugins.scala):
 
-  val junitPlugin = "no.aslakjo" % "junitsbt-plugin" % "1.0" from "http://cloud.github.com/downloads/aslakjo/junitsbt-plugin/junitsbt-plugin-1.0.jar"
+  @val junitPlugin = "no.aslakjo" % "junitsbt-plugin" % "1.0" from "http://cloud.github.com/downloads/aslakjo/junitsbt-plugin/junitsbt-plugin-1.0.jar"@
 
 What it does is giving you a trait called "Junit" which you have to mix in to your project file. Like so:
 
 
-    import junitsbtplugin._
+    @import junitsbtplugin._
 
     class Project(info: ProjectInfo) extends DefaultProject(info) with JUnit{
-    }
+    }@
 
 Now you can run "reload", "update" then "~ test-quick" and watch the magic unfold.
 

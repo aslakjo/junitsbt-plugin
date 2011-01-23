@@ -13,7 +13,7 @@ What it does is giving you a trait called "Junit" which you have to mix in to yo
 
 
 bq. import junitsbtplugin._
-bq. class Project(info: ProjectInfo) extends DefaultProject(info) with JUnit{}
+class Project(info: ProjectInfo) extends DefaultProject(info) with JUnit{}
 
 Now you can run "reload", "update" then "~ test-quick" and watch the magic unfold.
 

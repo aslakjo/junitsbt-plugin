@@ -1,0 +1,24 @@
+h1. Junit sbt plugin
+
+This is a plugin that makes it super easy to run your junit tests in sbt. Which seams to be the easiest way to get
+incrimental test running which gives instant feedback.
+
+h2. Install
+
+Add the following line to your plugins file (which is located at project/plugins/Plugins.scala):
+
+  val junitPlugin = "no.aslakjo" % "junitsbt-plugin" % "1.0" from "http://cloud.github.com/downloads/aslakjo/junitsbt-plugin/junitsbt-plugin-1.0.jar"
+
+What it does is giving you a trait called "Junit" which you have to mix in to your project file. Like so:
+
+
+    import junitsbtplugin._
+
+    class Project(info: ProjectInfo) extends DefaultProject(info) with JUnit{
+    }
+
+Now you can run "reload", "update" then "~ test-quick" and watch the magic unfold.
+
+h2. Credits
+
+This is all possible due to a sbt testframwork interface for junit that "Bryan J Swift":http://bryanjswift.com/ has made.
